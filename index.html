@@ -15,11 +15,11 @@ const list = document.getElementById('userList');
 button.addEventListener('click', async () => {
   button.innerText = 'Загрузка...';
 
-  const response = await fetch('');
+  const response = await fetch('https://pokeapi.co/api/v2/pokemon/pikachu');
   const users = await response.json();
 
   list.innerHTML = '';
-  users.forEach(user => {
+  users.forEach(post => {
     const li = document.createElement('li');
     li.innerText =  + ` ('post.title ${user.email}')`;
     list.appendChild(li);
